@@ -1,0 +1,102 @@
+/* baloo-thambi-2-regular - latin */
+@font-face {
+    font-family: 'Baloo Thambi 2';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/baloo-thambi-2-v2-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/baloo-thambi-2-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/baloo-thambi-2-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/baloo-thambi-2-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/baloo-thambi-2-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/baloo-thambi-2-v2-latin-regular.svg#BalooThambi2') format('svg'); /* Legacy iOS */
+  }
+
+/* concert-one-regular - latin */
+@font-face {
+    font-family: 'Concert One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/concert-one-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/concert-one-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/concert-one-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/concert-one-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/concert-one-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/concert-one-v12-latin-regular.svg#ConcertOne') format('svg'); /* Legacy iOS */
+  }
+
+#cards{
+display:flex;
+flex-wrap:nowrap;
+flex-direction: row;
+align-items: center;
+flex-basis: 0;
+justify-content: flex-start;
+margin:3%;
+}
+
+.item-flexbox{
+padding:1%;
+flex:auto;
+border-left: solid white 8px;
+flex-wrap:wrap;
+margin:1%;
+
+box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
+-webkit-box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
+-moz-box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
+}
+
+.image-responsive{
+    width:100%;
+    height:auto;
+}
+
+.item-flexbox p{
+
+text-align: center;
+font-family: 'Baloo Thambi 2';
+}
+
+.item-flexbox h3{
+    text-align: center;
+    font-family: 'Concert One';
+    letter-spacing: 5px;
+    }
+
+    .item-flexbox:hover{
+        box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
+        -webkit-box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
+        -moz-box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
+        transition: all 1s ease-out;
+    }
+
+    @media all and (max-width: 600px)
+    {
+        #cards{
+            display:flex;
+            flex-wrap:wrap;
+            flex-direction: column;
+            align-items: normal;
+            flex-basis: 0;
+            justify-content: center;
+            margin:0;
+            }
+
+            .item-flexbox{
+                padding:0%;
+                flex:auto;
+                border-left: solid white 0px;
+                flex-wrap:wrap;
+                margin:0%;
+                
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                }
+            .item-flexbox img{
+                width:100%!IMPORTANT;
+                height:auto;
+            }
+            }
