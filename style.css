@@ -1,3 +1,4 @@
+/* Fonts*/
 /* baloo-thambi-2-regular - latin */
 @font-face {
     font-family: 'Baloo Thambi 2';
@@ -26,6 +27,36 @@
          url('fonts/concert-one-v12-latin-regular.svg#ConcertOne') format('svg'); /* Legacy iOS */
   }
 
+/* Section Hero */
+
+#heroflexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.item-flexbox-hero-droit{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.item-flexbox-hero-gauche{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+/* Section article*/
+
 #cards{
 display:flex;
 flex-wrap:nowrap;
@@ -36,7 +67,7 @@ justify-content: flex-start;
 margin:3%;
 }
 
-.item-flexbox{
+.item-flexbox-article-grid{
 padding:1%;
 flex:auto;
 border-left: solid white 8px;
@@ -53,24 +84,25 @@ box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
     height:auto;
 }
 
-.item-flexbox p{
+.item-flexbox-article-grid p{
 
 text-align: center;
 font-family: 'Baloo Thambi 2';
 }
 
-.item-flexbox h3{
+.item-flexbox-article-grid h3{
     text-align: center;
     font-family: 'Concert One';
     letter-spacing: 5px;
     }
 
-    .item-flexbox:hover{
+    .item-flexbox-article-grid:hover{
         box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
         -webkit-box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
         -moz-box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
         transition: all 1s ease-out;
     }
+/* Media queries article */
 
     @media all and (max-width: 600px)
     {
@@ -84,7 +116,7 @@ font-family: 'Baloo Thambi 2';
             margin:0;
             }
 
-            .item-flexbox{
+            .item-flexbox-article-grid{
                 padding:0%;
                 flex:auto;
                 border-left: solid white 0px;
@@ -95,8 +127,67 @@ font-family: 'Baloo Thambi 2';
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 }
-            .item-flexbox img{
+            .item-flexbox-article-grid img{
                 width:100%!IMPORTANT;
                 height:auto;
             }
             }
+
+            @media only screen and (min-width: 1024px) and (max-width: 1920px) {
+                #cards{
+                    display:flex;
+                    flex-wrap:nowrap;
+                    flex-direction: row;
+                    align-items: normal;
+                    flex-basis: 0;
+                    justify-content: center;
+                    margin:0;
+                    }
+        
+                    .item-flexbox-article-grid{
+                        padding:0%;
+                        flex:auto;
+                        border-left: solid white 0px;
+                        flex-wrap:wrap;
+                        margin:0%;
+                        
+                        box-shadow: none;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        }
+                    .item-flexbox-article-grid img{
+                        width:100%!IMPORTANT;
+                        height:auto;
+                    }
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                #cards{
+                    display:flex;
+                    flex-wrap:wrap;
+                    flex-direction: row;
+                    align-items: normal;
+                    flex-basis: 0;
+                    justify-content: center;
+                    margin:0;
+                    }
+        
+                    .item-flexbox-article-grid{
+                        padding:0%;
+                        flex:auto;
+                        border-left: solid white 0px;
+                        flex-wrap:wrap;
+                        margin:0%;
+                        
+                        box-shadow: none;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        }
+                    .item-flexbox-article-grid img{
+                        width:100%!IMPORTANT;
+                        height:auto;
+                    }
+            }
+            
+/* Fin medias queries article*/
+
