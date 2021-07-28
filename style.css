@@ -26,6 +26,25 @@
          url('fonts/concert-one-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('fonts/concert-one-v12-latin-regular.svg#ConcertOne') format('svg'); /* Legacy iOS */
   }
+/* Hero cover */
+
+.cover-hero{
+    background-image: url('images/hero-cover.jpg');
+    width:100%;
+    background-size: cover;
+height:550px;
+align-items: center;
+display:flex;
+justify-content: center;
+}
+
+.btn-primary{
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: whitesmoke;
+    font-size: 16px;
+}
 
 /* Section Hero */
 
@@ -73,7 +92,6 @@ flex:auto;
 border-left: solid white 8px;
 flex-wrap:wrap;
 margin:1%;
-
 box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
 -webkit-box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
 -moz-box-shadow: 4px -2px 51px -15px rgba(0,0,0,0.15);
