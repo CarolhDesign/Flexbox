@@ -1,3 +1,5 @@
+
+
 /* Fonts*/
 /* baloo-thambi-2-regular - latin */
 @font-face {
@@ -26,24 +28,102 @@
          url('fonts/concert-one-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('fonts/concert-one-v12-latin-regular.svg#ConcertOne') format('svg'); /* Legacy iOS */
   }
+/* Menu */
+
+#principal{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    position: fixed;
+    z-index:2;
+    background-color:white;
+    margin-top: -1%;
+    margin:auto;
+    bottom:0;
+    height:15vh;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.menu li {
+    margin-left:1%;
+    margin-right:1%;
+    font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Placement des menu-items 
+
+.menu-logo:nth-child(3){
+    order: 1;
+}
+.menu-item:nth-child(1){
+    order: 2;
+}
+.menu-item:nth-child(2){
+    order: 3;
+}
+.menu-item:nth-child(4){
+    order: 4;
+}
+.menu-item:nth-child(5){
+    order: 5;
+} */
+
 /* Hero cover */
 
 .cover-hero{
     background-image: url('images/hero-cover.jpg');
     width:100%;
     background-size: cover;
-height:550px;
-align-items: center;
-display:flex;
-justify-content: center;
+    height: 100vh;
+    align-items: center;
+    display:flex;
+    justify-content: flex-start;
+
+}
+
+.content-cover-hero{
+    position:relative;
+    left: 10%;
+    color:white;
 }
 
 .btn-primary{
     padding: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
-    color: whitesmoke;
+    background-color: transparent;
+    border-bottom: solid 2px white;
+    border-left:none;
+    border-top:none;
+    border-right:none;
+    color:white;
+    position:relative;
+    top:4vh;
     font-size: 16px;
+    width: 100%;
+    transition: all 200ms ease-in;
+}
+
+.btn-primary:hover{
+    border-bottom:solid 2px #27798f;
+    transform : scale(1.1)
+}
+
+.full-size{
+    width:100vh;
+    height:auto;
 }
 
 /* Section Hero */
@@ -54,26 +134,31 @@ justify-content: center;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    align-content: center;
+    position: relative;
+    margin-bottom : 2%;
 }
 
 .item-flexbox-hero-droit{
     display: block;
-    flex-grow: 0;
+    flex-grow: 3;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    position: relative;
+    margin-left: 10%;
 }
 
 .item-flexbox-hero-gauche{
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: auto;
+    flex-basis: 40%;
     align-self: auto;
     order: 0;
+    flex-grow: 1;
 }
+
 /* Section article*/
 
 #cards{
@@ -84,6 +169,7 @@ align-items: center;
 flex-basis: 0;
 justify-content: flex-start;
 margin:3%;
+position: relative;
 }
 
 .item-flexbox-article-grid{
@@ -120,10 +206,66 @@ font-family: 'Baloo Thambi 2';
         -moz-box-shadow: -1px -1px 37px -22px rgba(254,15,127,1);
         transition: all 1s ease-out;
     }
+
+ /* Banner cover */
+
+#banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/hero-cover.jpg');
+    background-size:cover;
+    flex-basis: 100vh;
+    min-height: 350px;
+    margin-top:2%;
+    margin-bottom:8%;
+
+}
+
+#banner .bloc-texte-banner{
+    color:white;
+    text-align: center;
+}
+
+.bloc-texte-banner h3{
+    font-size: 30px;
+}
+
 /* Media queries article */
 
     @media all and (max-width: 600px)
     {
+        .menu-logo{
+            width:10%;
+            height:auto;
+        }
+        .menu{
+            position: relative;
+            right:10%;  
+        } 
+ 
+        .cover-hero{
+            background-image: url('images/hero-cover.jpg');
+            width:100%;
+            background-size: cover;
+            height: 100vh;
+            align-items: center;
+            display:flex;
+            justify-content: center;
+        
+        }
+
+        #heroflexbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            margin-bottom : 2%;
+        }
+
         #cards{
             display:flex;
             flex-wrap:wrap;
@@ -149,6 +291,7 @@ font-family: 'Baloo Thambi 2';
                 width:100%!IMPORTANT;
                 height:auto;
             }
+            #banner{    margin-bottom:20%;}
             }
 
             @media only screen and (min-width: 1024px) and (max-width: 1920px) {
